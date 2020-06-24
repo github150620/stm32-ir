@@ -68,6 +68,7 @@ int main() {
 	TIM_OC2PreloadConfig(TIM2, TIM_OCPreload_Enable);
 	
 	TIM_Cmd(TIM2, ENABLE);
+	TIM_CtrlPWMOutputs(TIM2, ENABLE);	
 	
 	TIM_SetCompare2(TIM2, pwm_38k_duty_cycle);
 	delay_us(head_high);
